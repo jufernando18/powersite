@@ -36,5 +36,17 @@
             opacity: 0.85;	        
 	    }
 	</style>
+	<script type="text/javascript">
+		backgroundSizeMovile();
+		function backgroundSizeMovile(){	
+			if (/mobile/i.test(navigator.userAgent)) {
+				var element = document.getElementsByTagName("body");
+			    for(i=0;i<element.length;i++){
+			        //element[i].style.visibility="hidden";
+			        element[i].style.backgroundSize="auto";
+			    }			
+			}
+		}		
+	</script>
 </body>
 </html>

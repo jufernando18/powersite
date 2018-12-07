@@ -12,22 +12,12 @@
 		<h1>Welcome to your improved version</h1>
 		<h3>My name is Juan Fernando, and I made this for help to found and to improve skills, and mainly, to found yourself in order to make yours your life and to fully enjoy it.</h3>
 		<h1 class="naty">I LOVE YOU MY LADY</h1>
-		<img class="naty" title="Nataly Moreno" src="indexFiles/img/mylady.jpeg">
+		<img class="naty" title="Nataly Moreno" src="../localFiles/img/mylady.jpeg">
 	</div>
-	<script>
-		naty();
-		
-		function naty(){
-		    var element = document.getElementsByClassName("naty");
-		    for(i=0;i<element.length;i++){
-		        //element[i].style.visibility="hidden";
-		        element[i].style.display="none";
-		    }
-		}
-	</script>
 	<style>
 	    body{
 	        background-image: url("indexFiles/img/icon.jpg");
+	        background-size: 100%;
 	        padding : 2% 15%;
 	        overflow: hidden;
 	    }
@@ -49,5 +39,26 @@
             opacity: 0.85;	        
 	    }
 	</style>
+	<script>
+		naty();
+		
+		function naty(){
+		    var element = document.getElementsByClassName("naty");
+		    for(i=0;i<element.length;i++){
+		        //element[i].style.visibility="hidden";
+		        element[i].style.display="none";
+		    }
+		}
+		backgroundSizeMovile();
+		function backgroundSizeMovile(){	
+			if (/mobile/i.test(navigator.userAgent)) {
+				var element = document.getElementsByTagName("body");
+			    for(i=0;i<element.length;i++){
+			        //element[i].style.visibility="hidden";
+			        element[i].style.backgroundSize="auto";
+			    }			
+			}
+		}		
+	</script>	
 </body>
 </html>
