@@ -15,12 +15,22 @@
 		<img class="naty" title="Nataly Moreno" src="../localFiles/img/mylady.jpeg">
 	</div>
 	<style>
-	    body{
-	        background-image: url("indexFiles/img/icon.jpg");
-	        background-size: 100%;
-	        padding : 2% 15%;
-	        overflow: hidden;
-	    }
+		@media (orientation: portrait) {
+			body{
+		        background: url("indexFiles/img/icon.jpg");
+		        background-size: auto 100%;
+		        padding : 2% 15%;
+		        overflow: hidden;
+			}
+		}
+		@media (orientation: landscape) {
+			body{
+		        background: url("indexFiles/img/icon.jpg");
+		        background-size: 100% auto;
+		        padding : 2% 15%;
+		        overflow: hidden;
+			}
+		}		
 	    h1{
 	        color: #e02121;
 	        filter: brightness(100%)!important;
@@ -37,6 +47,10 @@
             border-radius: 1em;
             filter: brightness(75%);
             opacity: 0.85;	        
+	    }
+	    html{
+	    	height: 100%;
+	    	width: 100%;
 	    }
 	</style>
 	<script>
